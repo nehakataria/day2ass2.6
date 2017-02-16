@@ -1,0 +1,82 @@
+Q1. Write a program to accept two numbers from “stdin” and find all the odd as well as even numbers present in between them.?
+A1 PROGRAM
+import java.util.Scanner;
+
+public class acad {
+	
+public static void main(String args[])
+{
+	StringBuffer sb = new StringBuffer();
+		StringBuffer sb1 = new StringBuffer();
+		Scanner sc =new Scanner(System.in);
+		int a = sc.nextInt();
+		int b =sc.nextInt();
+		for (int i = a; i <=b; i++) {
+			if(i%2==0)
+			{
+				sb.append(i);
+				sb.append(" ");
+			}
+			else
+			{
+				sb1.append(i);
+				sb1.append(" ");
+			}
+		}
+		System.out.println("The even number are");
+		System.out.println(sb.toString());
+		System.out.println("The odd number are");
+		System.out.println(sb1.toString());
+	}
+
+}
+Q2.Joe is scared to go to school. When her dad asked for the reason, Joe said that she was unable to complete the task given to her
+by her teacher. The task was to find the “first 10 multiples” of the number entered from “stdin”. 
+A2. PROGRAM
+import java.util.Scanner;
+
+public class acad {
+	
+public static void main(String args[])
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Input");
+		int a = sc.nextInt();
+		System.out.println("Output");
+		for (int i = 1; i <=10; i++) {
+			System.out.println(a+"x"+i+"="+i*a);
+			
+		}
+	}
+
+}
+Q3.Write a program consisting the method “sum()” and demonstrate the concept of method overloading using this method.
+A3
+PROGRAM
+
+import java.util.Scanner;
+
+public class acad {
+	public static void sum(int a , int b)
+    {
+         System.out.println(a+b);
+         
+    }
+    public static void  sum(String s ,String s1)  
+    {
+    	String s4 = s+s1;
+         System.out.println(s4);
+    }
+	
+	public static void main(String args[])
+	{
+		Scanner sc= new Scanner(System.in);
+		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		String s = sc.next();
+		String s4 = sc.next();
+		sum(a,b);//sum with integer type as input
+		sum(s,s4);//	sum with String type as input
+		}
+	}
